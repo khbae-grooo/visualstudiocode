@@ -3,9 +3,14 @@ nginx 가이드
 
 
 ## 설치 
-
+```
 $ brew update
 $ brew install nginx
+```
+
+## listen 포트 & pid 확인방법 (TCP/UDP 세션 확인방법]
+$ netstat -anv | grep LISTEN 
+
 
 ## install 후 nginx, openssl@1.1, pcre 설치됨
 
