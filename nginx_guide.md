@@ -28,6 +28,42 @@ $ vi /usr/local/etc/nginx/nginx.conf
 # http://locahost 접속하여 포트 확인
 ~~~
 
+## nginx 포트를 다른포트로 연동하기 (proxy pass)
+
+#### nginx.conf 파일 수정 및 재실행
+#### nginx 설치 폴더의 conf폴더 내 nginx.conf 파일을 수정하여 server 부분에 아래의 코드만 남기고 제거합니다. 이렇게 해서 localhost:80으로 접근하면 자동으로 localhost:xxxx으로 연결되도록 합니다. 
+
+```
+$ vi /usr/local/etc/nginx/nginx.conf
+```
+
+#### nginx.conf 파일 내부 수정
+~~~
+server {
+        listen       80;
+        server_name  localhost;
+
+        #charset koi8-r;
+
+        #access_log  logs/host.access.log  main;
+
+        location / {
+            proxy_pass http://127.0.0.1:xxxx;  # 변경된 부분
+            #root   html;
+            #index  index.html index.htm;
+        }
+
+        #error_page  404              /404.html;
+~~~
+nginx.conf 파일을 wq! 명령어으로 저장후 종료
+nginx 재시작 
+```
+$ nginx -s reload
+```
+웹 접속하면 http://localhost 가 http://locahost:xxxx로 재접속되는 것을 확인할 수 있다.
+~~~
+[출처 go웹앱을 NginX와 연동하기](https://streamls.tistory.com/101?category=830512)
+
 
 ## nginx 외부에서 접속하기, 포트포워딩
 
