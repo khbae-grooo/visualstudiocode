@@ -68,6 +68,6 @@ $ sudo pfctl -evf /etc/pf.conf
 나는 80은 닫혀있고 8080은 열려있다. (여기서 SKB에서 80을 막아놓았음을 확인할 수 있었다. 맥의 방화벽은 사용 안 하고 있었고, 공유기의 포트포워딩은 80, 8080 둘다 동일하게 적용이 되어 있었다. 찾아보니 KT에서는 알려진 포트 사용에 관대하다고 알려져있다.)
 
 내 NO-IP 에서 제공받는 DDNS 도메인주소에 8080포트로 접속하면 내 nginx 루트 페이지가 열림을 확인하였다!
-[출처] [nginx 외부에서 접속하기, 포트포워딩 링크](https://lhb0517.tistory.com/entry/OS-X-%EB%A7%A5-OS-X-nginx-%EC%99%B8%EB%B6%80%EC%97%90%EC%84%9C-%EC%A0%91%EC%86%8D%ED%95%98%EA%B8%B0-%ED%8F%AC%ED%8A%B8%ED%8F%AC%EC%9B%8C%EB%94%A9?category=726837)
 ```
+[출처] [nginx 외부에서 접속하기, 포트포워딩 링크](https://lhb0517.tistory.com/entry/OS-X-%EB%A7%A5-OS-X-nginx-%EC%99%B8%EB%B6%80%EC%97%90%EC%84%9C-%EC%A0%91%EC%86%8D%ED%95%98%EA%B8%B0-%ED%8F%AC%ED%8A%B8%ED%8F%AC%EC%9B%8C%EB%94%A9?category=726837)
 
