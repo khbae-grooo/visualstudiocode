@@ -1,8 +1,10 @@
 
 # 파이썬 설치
+
 python
   설치 유의사항 : AWS 옵션
   주석은 '#' 로 표시
+  
 IDE : pycharm (pycharm-community-2020)
   실행 : ^ option R
   디버깅 : ^ option D
